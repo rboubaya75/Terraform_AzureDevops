@@ -9,9 +9,9 @@ terraform {
 }
 provider "azurerm" {
   features {}
-  subscription_id             = "4398a24f-81d9-469d-8b59-2f51ac63df2d"
-  client_id                   = "19dced19-761d-475d-94ae-68c5e77cca98"
-  tenant_id                   ="a2e466aa-4f86-4545-b5b8-97da7c8febf3"
+  subscription_id             = $subscription
+  client_id                   = $client
+  tenant_id                   = $tenant
 }
 resource "azurerm_resource_group" "main" {
   name     = "example-resources"
